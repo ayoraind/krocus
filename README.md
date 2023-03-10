@@ -4,7 +4,7 @@
 ```
 
 ===============================================
- KROCUS TAPIR MLST Pipeline version ${version}
+ KROCUS TAPIR MLST Pipeline version 1.0dev
 ===============================================
 
 Mandatory arguments:
