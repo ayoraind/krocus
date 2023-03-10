@@ -166,8 +166,7 @@ Inputs are fastqs specified using `--reads` and the species to which the sample 
 An example of a command to run this pipeline for reads from Enterococcus faecalis is:
 
 ```
-nextflow run main.nf --reads "PathToReadFiles" --output_dir "PathToOutputDir" --allele_dir "AlleleName" --sequencing_date "GYYMMDD" --mlst_database
-"PathToMLSTDB"
+nextflow run main.nf --reads "MIGE/01_DATA/01_FASTQ/T055-8-*.fastq.gz" --output_dir "test" --allele_dir "efaecalis" --sequencing_date "G230202" --mlst_database "pubmlst"
 ```
 
 ## Word of Note
