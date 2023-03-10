@@ -169,3 +169,10 @@ An example of a command to run this pipeline for reads from Enterococcus faecali
 nextflow run main.nf --reads "PathToReadFiles" --output_dir "PathToOutputDir" --allele_dir "AlleleName" --sequencing_date "GYYMMDD" --mlst_database
 "PathToMLSTDB"
 ```
+
+## Word of Note
+This is an ongoing project at the Microbial Genome Analysis Group, Institute for Infection Prevention and Hospital Epidemiology, Üniversitätsklinikum, Freiburg. The project is funded by BMBF, Germany, and is led by [Dr. Sandra Reuter](https://www.uniklinik-freiburg.de/iuk-en/infection-prevention-and-hospital-epidemiology/research-group-reuter.html).
+
+
+## Authors and acknowledgment
+The TAPIR (Track Acquisition of Pathogens In Real-time) team.
