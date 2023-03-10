@@ -1,6 +1,4 @@
 ## Workflow to call MLST from uncorrected long reads using krocus.
-This Nextflow pipeline was adapted from Andrew Page and other co-authors, and can be found [here](https://github.com/andrewjpage/krocus).
-
 ### Usage
 
 ```
@@ -156,4 +154,18 @@ Mandatory arguments:
          			 --version                      Version statement
 
 
+```
+
+
+## Introduction
+This pipeline predicts MLST from uncorrected long reads derived from pure cultures or metagenomic samples. This Nextflow pipeline was adapted from Andrew Page and other co-authors, and can be found [here](https://github.com/andrewjpage/krocus).
+
+Inputs are fastqs specified using `--reads` and the species to which the sample reads belong specified using `--allele_dir`
+
+## Sample command
+An example of a command to run this pipeline for reads from Enterococcus faecalis is:
+
+```
+nextflow run main.nf --reads "PathToReadFiles" --output_dir "PathToOutputDir" --allele_dir "AlleleName" --sequencing_date "GYYMMDD" --mlst_database
+"PathToMLSTDB"
 ```
