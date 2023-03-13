@@ -160,6 +160,7 @@ Mandatory arguments:
 ## Introduction
 This pipeline predicts MLST from uncorrected long reads derived from pure cultures or metagenomic samples. This Nextflow pipeline was adapted from Andrew Page's [github page](https://github.com/andrewjpage/krocus), the original author of the Krocus tool.
 
+
 Inputs are fastqs specified using `--reads`. The species to which the sample reads belong are specified using `--allele_dir`.
 
 
