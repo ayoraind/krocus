@@ -3,7 +3,7 @@ process KROCUS {
 
    // publishDir "${params.output_dir}", mode:'copy'
 
-    conda './krocus_env.yml'
+    conda '/MIGE/01_DATA/07_TOOLS_AND_SOFTWARE/nextflow_pipelines/krocus/krocus_env.yml'
 
     input:
     tuple val(meta), path(reads)
@@ -57,7 +57,6 @@ process COMBINE_KROCUS_FILES {
     KROCUS_FILE=\${KROCUS_FILES[\$index]}
 
     awk -F '\\t' 'FNR>=1 { print FILENAME, \$0 }' \${KROCUS_FILE} | sed 's/\\.${allele_dir}\\.${kmer_size}mer\\.krocus\\.mod\\.txt//g' >> combined_krocus_${allele_dir}_${kmer_size}mer_${date}.txt
-
 
     done
     """
