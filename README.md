@@ -9,10 +9,11 @@
 
 Mandatory arguments:
          --reads                        Query fastqz file of sequences you wish to supply as input (e.g., "/MIGE/01_DATA/01_FASTQ/T055-8-*.fastq.gz")
-         --mlst_database                MLST database directory (full path required, e.g., "/sw/mlst-master/db/pubmlst")
+         --mlst_database                MLST database directory (e.g., "/sw/mlst-master/db/pubmlst")
          --output_dir                   Output directory to place final combined krocus MLST output (e.g., "/MIGE/01_DATA/03_ASSEMBLY")
          --sequencing_date              Sequencing Date (for TAPIR, must start with G e.g., "G230223")
-         --allele_dir                   Must be found within the mlst database directory (e.g., "efaecalis"). For TAPIR, this must be one of
+	 --kmer_size                    k-mer size (e.g., 11)
+         --mlst_species                 Must be found within the mlst database directory (e.g., "efaecalis"). For TAPIR, this must be one of
                                                 abaumannii
                                                 abaumannii_2
                                                 achromobacter
@@ -46,7 +47,7 @@ Mandatory arguments:
                                                 campylobacter
                                                 cdifficile
                                                 cfreundii
-						 chlamydiales
+						chlamydiales
                                                 ckrusei
                                                 cmaltaromaticum
                                                 csinensis
@@ -149,8 +150,7 @@ Mandatory arguments:
                                                 yruckeri
 						
 			 Optional arguments:
-        			 --kmer_size                    k-mer size (default: 11)
-         			 --help                         This usage statement.
+        			 --help                         This usage statement.
          			 --version                      Version statement
 
 
@@ -168,7 +168,7 @@ Inputs are fastqs specified using `--reads`. The species to which the sample rea
 An example of a command to run this pipeline for reads from Enterococcus faecalis is:
 
 ```
-nextflow run main.nf --reads "Sample_files/Sample-8-*.fastq.gz" --output_dir "test" --allele_dir "efaecalis" --sequencing_date "G230202" --mlst_database "pubmlst"
+nextflow run main.nf --reads "Sample_files/Sample-8-*.fastq.gz" --output_dir "test" --mlst_species "efaecalis" --sequencing_date "G230202" --mlst_database "pubmlst" --kmer_size 11
 ```
 
 ## Word of Note
