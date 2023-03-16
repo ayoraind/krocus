@@ -149,9 +149,9 @@ Mandatory arguments:
                                                 ypseudotuberculosis
                                                 yruckeri
 						
-			 Optional arguments:
-        			 --help                         This usage statement.
-         			 --version                      Version statement
+Optional arguments:
+        	--help                         This usage statement.
+         	--version                      Version statement
 
 
 ```
