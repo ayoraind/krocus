@@ -5,7 +5,7 @@ def help_message() {
         nextflow run main.nf --reads "PathToReadFile(s)" --output_dir "PathToOutputDir" --mlst_species "AlleleName" --sequencing_date "GYYMMDD" --mlst_database "PathToMLSTDB"
 
         Mandatory arguments:
-         --reads                        Query fastqz file of sequences you wish to supply as input (e.g., "/MIGE/01_DATA/01_FASTQ/T055-8-*.fastq.gz")
+         --reads                        Query fastq.gz file of sequences you wish to supply as input (e.g., "/MIGE/01_DATA/01_FASTQ/T055-8-*.fastq.gz")
          --mlst_database                MLST database directory (full path required, e.g., "/sw/mlst-master/db/pubmlst")
          --output_dir                   Output directory to place final combined krocus MLST output (e.g., "/MIGE/01_DATA/03_ASSEMBLY")
          --sequencing_date              Sequencing Date (for TAPIR, must start with G e.g., "G230223")
