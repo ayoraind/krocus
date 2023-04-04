@@ -2,7 +2,7 @@ def help_message() {
   log.info """
         Usage:
         The typical command for running the pipeline is as follows:
-        nextflow run main.nf --reads "PathToReadFile(s)" --output_dir "PathToOutputDir" --mlst_species "AlleleName" --sequencing_date "GYYMMDD" --mlst_database "PathToMLSTDB"
+        nextflow run main.nf --reads "PathToReadFile(s)" --output_dir "PathToOutputDir" --mlst_species "AlleleName" --sequencing_date "GYYMMDD" --mlst_database "PathToMLSTDB" --kmer_size "number"
 
         Mandatory arguments:
          --reads                        Query fastq.gz file of sequences you wish to supply as input (e.g., "/MIGE/01_DATA/01_FASTQ/T055-8-*.fastq.gz")
