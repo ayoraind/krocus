@@ -43,7 +43,7 @@ process COMBINE_KROCUS_FILES {
 
     output:
     path("combined_krocus_${allele_dir}_${kmer_size}mer_${date}.txt"), emit: krocus_comb_ch
-
+    path("combined_krocus_${allele_dir}_${kmer_size}mer_${date}_filtered.txt")
 
     script:
     """
@@ -55,5 +55,7 @@ process COMBINE_KROCUS_FILES {
     awk -F '\\t' 'FNR>=1 { print FILENAME, \$0 }' \${KROCUS_FILE} | sed 's/\\.${allele_dir}\\.${kmer_size}mer\\.krocus\\.mod\\.txt//g' >> combined_krocus_${allele_dir}_${kmer_size}mer_${date}.txt
 
     done
+    
+    combined_edit.sh combined_krocus_${allele_dir}_${kmer_size}mer_${date}.txt > combined_krocus_${allele_dir}_${kmer_size}mer_${date}_filtered.txt
     """
 }
