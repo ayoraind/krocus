@@ -171,6 +171,17 @@ An example of a command to run this pipeline for reads from Enterococcus faecali
 nextflow run main.nf --reads "Sample_files/Sample-8-*.fastq.gz" --output_dir "test" --mlst_species "efaecalis" --sequencing_date "G230202" --mlst_database "pubmlst" --kmer_size 11
 ```
 
+If this is to be done for multiple species, a for loop will be useful. An example can be found below:
+
+```
+for name in ecoli saureus shaemolyticus kaerogenes sepidermidis koxytoca efaecalis ecloacae shominis kpneumoniae paeruginosa slugdunensis neisseria
+do
+
+nextflow run main.nf --reads "*.fastq.gz" --output_dir "out_dir" --mlst_species "${name}" --sequencing_date "G230202" --mlst_database "pubmlst" --kmer_size 11 -w /path/to/work
+
+done
+```
+
 ## Word of Note
 This is an ongoing project at the Microbial Genome Analysis Group, Institute for Infection Prevention and Hospital Epidemiology, Üniversitätsklinikum, Freiburg. The project is funded by BMBF, Germany, and is led by [Dr. Sandra Reuter](https://www.uniklinik-freiburg.de/iuk-en/infection-prevention-and-hospital-epidemiology/research-group-reuter.html).
 
